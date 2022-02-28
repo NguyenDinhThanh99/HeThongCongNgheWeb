@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: auto;
+            padding: 0px;
+        }
+        .wrapper{
+            width: 1089px;
+            height:500px;
+            background-color: aquamarine;
+        }
+        nav{
+            height: 50px;
+            width: 1089px;
+            background-color: cadetblue;
+        }
+        .menu li{
+            float: left;
+            line-height: 50px;
+            height: 50px;
+            width: 217.5px;
+            list-style-type: none;
+            text-indent: 20px;
+            background-color: bisque;
+        }
+        a{
+            color: rgb(204, 131, 131);
+            font-size: larger;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .menu li:hover{
+            background-color: aliceblue;
+        }
+        
+        li:hover>a{
+            color: black;
+        }
+        .menu li .submenu{
+            display: none;
+        }
+        .menu li:hover>.submenu{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul class="menu">
+                <li><a href="">Item 1</a></li>
+                <li><a href="">Item 2</a></li>
+                <li><a href="">Item 3</a>
+                    <ul class="submenu">
+                        <li><a href="">SubItem 1</a></li>
+                        <li><a href="">SubItem 2</a></li>
+                        <li><a href="">SubItem 3</a></li>
+                    </ul></li>
+                    
+                <li><a href="">Item 4</a></li>
+                <li><a href="">Item 5</a></li>
+            </ul>
+        </nav>
+        
+    </div>
+</body>
+</html>
