@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            margin: auto;
+            padding: 10px;
+            width: 70%;
+            box-shadow: 10px 10px 10px 10px gray;
+            background-color: rgb(196, 233, 95);
+            font-size: x-large;
+        }
+        
+        #head {
+            text-align: center;
+        }
+        
+        li {
+            line-height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1 id="head">Survey form</h1>
+        <p>If you are interested in purchasing one more of our product, before ordering please complete or all of the following survey our Thank you very much for your time!
+        </p>
+        <ol>
+            <li>What is your name? <br> <input type="text" size="40">
+
+            </li>
+            <li>What is your day of birth?<br> Month
+                <select>
+                    <script>
+                        for (i = 1;i<=12;i++)
+                            document.write("<option value="+i + ">" + i + "</option>");
+                    </script>
+                </select> Date
+                <select>
+                    <script>
+                        for (i=1;i<=31;i++)
+                            document.write("<option value="+i+">"+i+"</option>");
+                    </script>
+                </select> Year
+                <select>
+                    <script>
+                        for(i=1999;i<=2030;i++)
+                            document.write("<option value="+i+">"+i+"</option>");
+                    </script>
+                </select>
+            </li>
+            <li>
+                What is your mailing Address? (if you would like to have a hard copy our catalog sent to you)?<br>
+                <textarea name="" id="" cols="80" rows="10"></textarea>
+            </li>
+            <!-- <li></li> -->
+        </ol>
+    </div>
+</body>
+
+</html>
