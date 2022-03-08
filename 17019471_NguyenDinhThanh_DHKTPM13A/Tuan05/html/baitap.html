@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px auto;
+            padding: 0px;
+        }
+        body{
+            background-image: url(../img/background.png);
+        }
+        .wrapper{
+            /* margin-top: 100px; */
+            height: 700px;
+            width: 1089px;
+            background-color: antiquewhite;
+        }
+        nav{
+            height: 50px;
+            width: 100%;
+            background-color: rgb(175, 110, 11);
+            line-height: 50px;
+        }
+        header{
+            height: 150px;
+            width: 100%;
+            background-image: url(../img/Header.jfif);
+            text-align: center;
+        }
+        h1{
+            color: whitesmoke;
+            font-weight: bold;
+            text-shadow: 3px 3px 5px yellowgreen;
+        }
+        h1:hover{
+            transform: rotate(45deg);
+        }
+        .content{
+            height: 300px;
+            width: 100%;
+            background-color: azure;
+        }
+        aside{
+            width: 40%;
+            height: 100%;
+            background-color: rgb(139, 235, 171);
+            float: left;
+        }
+        aside>article{
+            width: 100%;
+            height: 30%;
+        }
+        .aside_img{
+            width: 435px;
+            height: 100px;
+        }
+        section{
+            width: 60%;
+            height: 100%;
+            background-color: rgb(231, 137, 22);
+            float: left;
+        }
+        
+        .menu li{
+            height: 100%;
+            width: 100px;
+            background-color: blanchedalmond;
+            float: left;
+            list-style: none;
+            text-indent: 20px;
+            position: relative;
+        }
+        a{
+            color: blue;
+            text-decoration: none;
+        }
+        .menu li:hover{
+            background-color: greenyellow;
+        }
+        li:hover>a {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-style: italic;
+            color: brown;
+        }
+        .menu li .submenu{
+            display: none;
+            position: absolute;
+        }
+        .menu li:hover .submenu{
+            display: block;
+        }
+        nav span form #submit{
+            
+            border-radius: 50%;
+            padding: 3px;
+            margin: 3px;
+        }
+        nav span form #txtEmail{
+            padding: 3px;
+        }
+        .wrapper .content aside img:hover{
+            transform: rotate(45deg);
+        }
+        footer{
+            width: 100%;
+            height: 200px;
+            background-color: rgb(223, 241, 158);
+        }
+        h2{
+            text-align: center;
+            padding-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        
+        <nav>
+            <ul class="menu">
+                <li><a href="https://24h.com.vn">HOME</a></li>
+                <li><a href="">SERVICES</a></li>
+                <li><a href="">CONTACT</a>
+                    <ul class="submenu">
+                        <li><a href="">PHONE</a></li>
+                        <li><a href="">INTERNET</a></li>
+                        <li><a href="">TIVI</a></li>
+                    </ul>
+                </li>
+                <li><a href="">PHONE</a></li>
+                <li><a href="">INTERNET</a></li>
+                <li><a href="">TIVI</a></li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">HELP</a></li>
+            </ul>
+            <span>
+                <form action="dangky.php">
+                    <label for="lblEmail">Email:</label>
+                    <input type="email" name="txtEmail" id="txtEmail" required placeholder="Your Email">
+                    <input type="submit" value="GO" id="submit">
+                </form>
+            </span>
+        </nav>
+        <header>
+            <h1>GAME SHOW</h1>
+        </header>
+        <div class="content">
+            <aside>
+                <article>
+                    <h1>HOAT DONG 1</h1>
+                    <img class="aside_img" src="../img/h1.PNG" alt="" srcset="">
+                </article>
+                <article>
+                    <h1>HOAT DONG 2</h1>
+                    <img class="aside_img" src="../img/h2.PNG" alt="" srcset="">
+                </article>
+                <article>
+                    <h1>HOAT DONG 3</h1>
+                    <img class="aside_img" src="../img/h3.PNG" alt="" srcset="">
+                </article>
+            </aside>
+            <section>
+                <article>
+                    <form style="margin: auto;padding-top: 10px;width:500px ;" action="dangky.php">
+                        <fieldset>
+                            <legend>Thông tin đăng ký</legend>
+                            <label for="lblHoTen">Họ tên:</label>
+                            <input type="text" name="txtHoTen" id="txtHoTen" required placeholder="Nhập tên"><br><br>
+                            <label for="lblNgaySinh">Ngày sinh:</label>
+                            <input type="text" name="txtDate" id="txtDate" required placeholder="Ngày sinh" pattern="dd/MM/yyyy"><br><br>
+                            <label for="lblKhac">Thông tin khác</label>
+                            <input type="text" name="" id=""><br><br>
+                            <label for="lblKhac1">Thông tin khác</label>
+                            <input type="text" name="" id=""><br><br>
+                            <label for="lblKhac2">Thông tin khác</label>
+                            <input type="text" name="" id=""><br><br>
+                            <label for="lblKhac3">Thông tin khác</label>
+                            <input type="text" name="" id=""><br><br>
+                            <input style="padding: 5px 20px;" type="submit" value="GO">
+                        </fieldset>
+                    </form>
+                </article>
+            </section>
+        </div>
+        <footer>
+            <h2>17019471_NguyenDinhThanh_DHKTPM13A_HTCNW_GK</h2>
+        </footer>
+    </div>
+</body>
+</html>
