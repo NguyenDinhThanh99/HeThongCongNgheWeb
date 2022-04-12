@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .wrapper{
+            width: 1089px;
+            height: 800px;
+            
+        }
+        nav{
+            height: 50px;
+            background-color: antiquewhite;
+        }
+
+        .menu{
+            width: 70%;
+            height: 100%;
+            float: left;
+        }
+        .menu li{
+            height: 100%;
+            width: 150px;
+            background-color: aqua;
+            float: left;
+            list-style: none;
+            position: relative;
+            text-indent: 40px;
+            line-height: 50px;
+        }
+        .menu li:hover {
+            background-color: blueviolet;
+        }
+        .menu li:hover a{
+            color: aliceblue;
+        }
+        .menu li a{
+            text-decoration: none;
+        }
+        .menu li:hover .sub-menu{
+            display: block;
+            position:absolute;
+        }
+        span{
+            width: 30%;
+            height: 100%;
+            line-height: 50px;
+            background-color: aquamarine;
+        }
+        .sub-menu{
+            display: none;
+        }
+        #btnGo{
+            border-radius: 50%;
+            padding: 5px;
+        }
+        header{
+            background-image: url(../img/Header.jfif);
+            
+            width: 100%;
+            height: 150px;
+        }
+        h1{
+            color: blanchedalmond;
+            text-align: center;
+        }
+        h1:hover{
+            color: red;
+        }
+        .content{
+            width: 100%;
+            height: 450px;
+            background-color: aquamarine;
+        }
+        aside{
+            width: 40%;
+            height: 100%;
+            float: left;
+        }
+        article{
+            width: 100%;
+            height: 33%;
+            background-color: rgb(178, 178, 230);
+            float: left;
+        }
+        article>img{
+            height: 130px;
+            width: 435px;
+        }
+        aside img:hover{
+            transform: rotate(-30deg);
+        }
+        
+        section{
+            float: left;
+            width: 60%;
+            height: 100%;
+        }
+        #txtTen, #txtNgaySinh, #txtKhac, #txtKhac1{
+            margin: 10px;
+            width: 250px;
+        }
+        #btnSubmit{
+            padding: 10px;
+            margin: 20px;
+            
+        }
+        footer{
+            text-align: center;
+            padding-top: 50px;
+            width: 100%;
+            height: 150px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">SERVICES</a></li>
+                    <li><a href="#">CONTACT</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">PHONE</a></li>
+                            <li><a href="#">INTERNET</a></li>
+                            <li><a href="#">TIVI</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">HELP</a></li>
+                </ul>
+            </div>
+            <span>
+                <form action="" method="post" style="background-color: blue;">
+                    <label for="lblEmail">Email: </label>
+                    <input type="text" name="txtEmail" id="txtEmail" placeholder="Your Email...">
+                    <input type="button" value="GO" id="btnGo">
+                </form>
+            </span>
+        </nav>
+        <header>
+            <h1>GAME SHOW</h1>
+            <!-- <img src="../img/Hd1.png" alt="" srcset=""> -->
+        </header>
+        <div class="content">
+            <aside>
+                <article>
+                    <h3>HOẠT ĐỘNG 1</h3>
+                    <img src="../img/h1.PNG" alt="" srcset="">
+                </article>
+                <article>
+                    <h3>HOẠT ĐỘNG 2</h3>
+                    <img src="../img/h2.PNG" alt="" srcset="">
+                </article>
+                <article>
+                    <h3>HOẠT ĐỘNG 3</h3>
+                    <img src="../img/h3.PNG" alt="" srcset="">
+                </article>
+            </aside>
+            <section>
+                <form style="font-size: large;margin: auto;padding-top: 10px;width:500px ;" action="dangky.php" method="post" id="form-submit">
+                    <fieldset style="border-radius: 10px;">
+                        <legend>Thông tin đăng ký</legend>
+                        <label style="padding-left: 20px;padding-right: 54px;" for="lblHoten">Họ tên: </label>
+                        <input style="line-height: 20px;" type="text" name="txtTen" id="txtTen" placeholder="Nhập tên"><br>
+                        <label style="padding-left: 20px;padding-right: 30px;" for="lblNgaySinh">Ngày sinh: </label>
+                        <input type="date" name="txtNgaySinh" id="txtNgaySinh" placeholder="Nhập ngày sinh"><br>
+                        <label style="padding-left: 20px;" for="lblKhac">Thông tin khác: </label>
+                        <input type="text" name="txtKhac" id="txtKhac" placeholder=""><br>
+                        <label style="padding-left: 20px;" for="lblKhac1">Thông tin khác: </label>
+                        <input type="text" name="txtKhac1" id="txtKhac1" placeholder=""><br>
+                        <input id="btnSubmit" type="submit" value="Go">
+                    </fieldset>
+                    
+                </form>
+            </section>
+            
+        </div>
+        <footer>
+            <h2>17019471_NguyenDinhThanh_DHKTPM13A_HTCNW_GK</h2>
+        </footer>
+    </div>
+</body>
+</html>

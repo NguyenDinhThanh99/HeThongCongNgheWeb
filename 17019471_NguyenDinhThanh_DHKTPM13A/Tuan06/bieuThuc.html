@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let mau=/^IUh/i//thêm ^: bat91 đầu bằng iuh; thêm i không phân biệt hoa, thường
+        let chuoi="chào mừng iuh";
+        let so=mau.test(chuoi);//so sánh 2 chuỗi nếu trong chuoi có thành phần của mau thi tra ve true.
+        alert(so);
+
+    </script>
+    <script>
+        function KiemTra() {
+            let mau=/[0-9]$/
+            let kq=mau.test(document.getElementById("txtKT").innerText)
+            alert(kq);
+        }
+    </script>
+    '<label for="lblHoTen"> chuỗi kiểm tra: </label>
+    <input type="text" name="txt/kT" id="txtKT">
+    <input type="button" value="Kiểm tra" onclick="KiemTra();">
+</body>
+</html>

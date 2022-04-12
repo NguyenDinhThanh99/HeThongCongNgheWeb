@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function kiemtraHoTen(){
+            let mauHT=/^([a-z]+)((\s{1}[a-z]+){1,})$/i;
+            let chuoi=document.getElementById('txtHT').value.trim();
+            if (mauHT.test(chuoi)==true) {
+                spError.innerText="Nhập đúng mẫu";
+            } else {
+                spError.innerText="Nhập sai mẫu";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="" method="post">
+        <fieldset style="width: 500px;">
+            <legend>Kiểm nhập liệu</legend>
+            <label for="lblHT">Họ tên của bạn: </label>
+            <input style="width: 300px;" type="text" name="txtHT" id="txtHT" onblur="return kiemtraHoTen();"> <span id="spError">*</span>
+        </fieldset>
+    </form>
+</body>
+</html>
